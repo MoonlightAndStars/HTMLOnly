@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Form</title>
+  </head>
+  <body>
+    <main id="main-section">
+      <section id="amazon-form">
+        <form action="https://www.amazon.in/s" method="get">
+          <div>
+            <label for="product-search">Search Product on Amazon : </label>
+          </div>
+          <input
+            type="text"
+            id="product-search"
+            name="k"
+            placeholder="Enter product to search"
+            required
+            autocomplete="on"
+          />
+          <button type="submit">Search on Amazon</button>
+        </form>
+      </section>
+      <section id="google-form">
+        <form action="https://www.google.com/search" method="get">
+          <div><label for="google-search">Search On Google : </label></div>
+          <input
+            type="search"
+            id="google-search"
+            required
+            name="q"
+            placeholder="Type here to search"
+            autocomplete="off"
+          />
+          <input type="submit" value="Search on Google" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- input type can be either text or search when we are searching for something and if we use search as an input type the browser automatically adds a cross sign as soon as we enter anything and clicking the cross symbol resets the input field-->
+
+<!-- also the input type submit and value search on google works in a similar way as button>Search on Amazon  -->
+
+<!-- ERROR
+ 
+SyntaxError: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags (18:17)
+
+in my code prettier is throwing this error
+The error you're encountering is due to improper nesting of HTML tags. Specifically, the <p> tag is being closed prematurely or incorrectly. In HTML, certain tags like <div> cannot be nested inside a <p> tag because the <p> tag automatically closes when it encounters a block-level element like <div>.
+
+In your code, the <div> inside the <p> tag is causing the issue. To fix this, you can either:
+
+Remove the <div> inside the <p> tag, or
+
+Replace the <p> tag with a <div> or another appropriate block-level element.
+    
+*This error happened because p was containing div inside it.-->
