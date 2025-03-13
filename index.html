@@ -1,10 +1,109 @@
-<!-- attributes - we place attribute right after the opening tag. attributes are of two types. 1 Global 2 Custom
- 
-1 - Global Attribute - Global Attributes are the attributes which we can use on all html element - eg - style, hidden (we don't need to give value on this) title (when we hover over it then it shows whatever we have written in title. it is known as tool tip) 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML FORMS</h1>
+    <h2>YouTube</h2>
+    <form action="https://www.youtube.com/results" target="blank">
+      <input
+        type="text"
+        name="search_query"
+        placeholder="YouTube Search"
+        title="Search on YouTube"
+      />
+      <button type="submit">Search Product on Flipkart</button>
+    </form>
+    <h2>Flipkart</h2>
+    <form action="https://www.flipkart.com/search" target="_blank">
+      <input
+        type="text"
+        name="q"
+        placeholder="Flipkart Search"
+        title="Search on Flipkart"
+      />
+      <button type="submit">Search Product on Flipkart</button>
+    </form>
+    <h2>My Form</h2>
+    <form action="/" target="_blank">
+      <input
+        type="text"
+        name="search_me1"
+        placeholder="Self Search 1"
+        title="Search"
+      />
+      <button type="submit">Search Me</button>
+    </form>
+    <form action="/">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter  Email"
+        title="Email Address"
+      />
+      <button type="submit">Submit</button>
+    </form>
 
-There are few attributes which directly do not have any effect on our website and two of the most commonly used attributes are class and id. 
+    <h2>DEMO FORM WITH MULTIPLE FIELDS</h2>
+    <form action="/">
+      <label for="name">Enter Name : </label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter Name"
+        title="Full Name"
+        name="Enter Full Name"
+        required
+      />
+      <label for="email">Enter Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter Email"
+        title="Email"
+        name="Enter Email"
+        required
+      />
+      <label for="password"></label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter Password"
+        title="Password"
+        required
+        minlength="8"
+        maxlength="15"
+        name="Enter Password"
+      />
+      <label for="telephone-number">Telephone Number : </label>
+      <input
+        type="tel"
+        name="user-telephone"
+        id="telephone-number"
+        required
+        pattern="/+/d{0,3}/d{10}"
+      />
+      <label for="color-pick">Pick Color : </label>
+      <input type="color" id="color-pick" />
+      <input type="checkbox" id="checkbox-select" />
+      <label for="checkbox-select">Click the checkbox</label>
+      <label for="date-time">Select Date and Time : </label>
+      <input type="date" id="date-time" />
+      <input type="time" id="date-time" />
+      <label for="upload-file">Upload File : </label>
+      <input type="file" id="upload-file" value="Upload File" />
+      <label for="range-selection">Select Range : </label>
+      <input type="range" id="range-selection" />
+      <input type="reset" />
+      <input type="submit" value="Search" />
+      <!-- normally this is not used, we give value and the value is displayed on the button the type submit created a button -->
+      <button type="submit">Submit</button>
+      <!-- by default the type of button is submit this is why we do not give type=submit to button -->
+    </form>
+  </body>
+</html>
 
-data-(anything) - we use in javascript
-
-2 - Custom Attribute - we can write anything we want and it can be used as an attribute. it can be used for css and javascript but it does not hold any specific meaning in html.
--->
+<!-- by default input type of input is text and by default the button type is submit  -->

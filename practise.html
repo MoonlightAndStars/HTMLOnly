@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <section>
+      <h3>Create Account</h3>
+      <p>It is free and always will be !</p>
+      <form action="/">
+        <!-- by default this is inline so it comes line by line so we use div and p to give a little space and also move them to next line -->
+        <div><label for="username">Enter Username : </label></div>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter User Name"
+          name="username"
+          required
+          autofocus
+        />
+        <div><label for="email">Enter Email : </label></div>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Password"
+          name="email"
+          required
+          autofocus
+        />
+        <div><label for="mobile-number">Enter Mobile Number : </label></div>
+        <input
+          type="tel"
+          id="mobile-number"
+          placeholder="Enter Mobile Number"
+          name="mobile"
+          required
+        />
+        <div><label for="password">Enter Password : </label></div>
+        <input
+          type="password"
+          id="password"
+          required
+          minlength="8"
+          maxlength="12"
+          placeholder="Enter Password"
+          name="password"
+        />
+        <!-- very important : the name attribute in form helps us to identify the data being sent through the url it names the data and for password and other sensitive information we use encryption method to send data via url so that the sensitive data is processed quickly without getting shown to others -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </body>
+</html>
